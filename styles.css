@@ -9,26 +9,26 @@ body {
 }
 
 .calculator {
-            Background-color: #333;
-            Padding: 20px;
-            Border-radius: 10px;
-            Box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            Width: 320px;
-            /* Añadir la imagen de fondo */
-            Background-image: url(‘argentina.jpeg’);
-            Background-size: cover;
-            Background-position: center;
-            Background-repeat: no-repeat;
-        }
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    /* Añadir la imagen de fondo */
+    background-image: url('argentina.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 #display {
     width: 100%;
-    height: 50px;
+    height: 80px;
     font-size: 2rem;
     background-color: #222;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -51,20 +51,20 @@ button {
     transition: background-color 0.3s ease;
 }
 
-Button:hover {
-            Background-color: #777;
-        }
+button:hover {
+    background-color: #777;
+}
 
-        Button.numeros{
-            Grid-column: span 1;
-            Background-color: #424242;
-        }
+button.numeros{
+    grid-column: span 1;
+    background-color: #424242;
+}
 
+button.cero{
+    grid-column: span 3;
+    background-color: #424242;
+}
 
-        Button.cero{
-            Grid-column: span 3;
-            Background-color: #424242;
-        }
-        Button:active {
-            Background-color: #999;
-        }
+button:active {
+    background-color: #999;
+}
