@@ -1,30 +1,29 @@
-        Function appendToDisplay(value) {
-            Document.getElementById(‘display’).value += value;
-        }
+function appendToDisplay(value) {
+    document.getElementById('display').value += value;
+}
 
-        Function clearDisplay() {
-            Document.getElementById(‘display’).value = ‘’;
-        }
+function clearDisplay() {
+    document.getElementById('display').value = '';
+}
 
-        Function deleteLast() {
-            Let display = document.getElementById(‘display’).value;
-            Document.getElementById(‘display’).value = display.slice(0, -1);
-        }
+function deleteLast() {
+    let display = document.getElementById('display').value;
+    document.getElementById('display').value = display.slice(0, -1);
+}
 
-        Function calculate() {
-            Let display = document.getElementById(‘display’).value;
+function calculate() {
+    let display = document.getElementById('display').value;
 
-            // Reemplazo de ^ para hacer la operación de potencia usando **
-            Display = display.replace(/\^/g, ‘**’);
+    // Reemplazo de ^ para hacer la operación de potencia usando **
+    display = display.replace(/\^/g, '**');
 
-            // Cálculo de porcentaje
-            Display = display.replace(/(\d+)%/g, ‘($1/100)’);
+    // Cálculo de porcentaje
+    display = display.replace(/(\d+)%/g, '($1/100)');
 
-    Try {
-                Let result = eval(display);
-                Document.getElementById(‘display’).value = result + ‘ 😊’;
-            } catch (error) {
-                Document.getElementById(‘display’).value = Error + ‘ 😪’;
-            }
-
+  try {
+        let result = eval(display);
+        document.getElementById('display').value = result + ' 😊'; // Muestra el resultado con la carita feliz
+    } catch (error) {
+        document.getElementById('display').value = 'Error 😪'; // Muestra mensaje de error con carita triste
+    }
 }
