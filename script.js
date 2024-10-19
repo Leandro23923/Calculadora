@@ -1,21 +1,30 @@
-function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-}
+        Function appendToDisplay(value) {
+            Document.getElementById(‘display’).value += value;
+        }
 
-function clearDisplay() {
-    document.getElementById('display').value = '';
-}
+        Function clearDisplay() {
+            Document.getElementById(‘display’).value = ‘’;
+        }
 
-function deleteLast() {
-    let display = document.getElementById('display').value;
-    document.getElementById('display').value = display.slice(0, -1);
-}
+        Function deleteLast() {
+            Let display = document.getElementById(‘display’).value;
+            Document.getElementById(‘display’).value = display.slice(0, -1);
+        }
 
-function calculate() {
-    let display = document.getElementById('display').value;
-    try {
-        document.getElementById('display').value = eval(display);
-    } catch (error) {
-        document.getElementById('display').value = 'Error';
-    }
+        Function calculate() {
+            Let display = document.getElementById(‘display’).value;
+
+            // Reemplazo de ^ para hacer la operación de potencia usando **
+            Display = display.replace(/\^/g, ‘**’);
+
+            // Cálculo de porcentaje
+            Display = display.replace(/(\d+)%/g, ‘($1/100)’);
+
+    Try {
+                Let result = eval(display);
+                Document.getElementById(‘display’).value = result + ‘ 😊’;
+            } catch (error) {
+                Document.getElementById(‘display’).value = Error + ‘ 😪’;
+            }
+
 }
