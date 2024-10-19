@@ -9,12 +9,17 @@ body {
 }
 
 .calculator {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 320px;
-}
+            Background-color: #333;
+            Padding: 20px;
+            Border-radius: 10px;
+            Box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            Width: 320px;
+            /* Añadir la imagen de fondo */
+            Background-image: url(‘argentina.jpeg’);
+            Background-size: cover;
+            Background-position: center;
+            Background-repeat: no-repeat;
+        }
 
 #display {
     width: 100%;
@@ -24,7 +29,7 @@ body {
     color: #fff;
     border: none;
     padding: 10px;
-    text-align: right;
+    text-align: center;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -46,14 +51,20 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #777;
-}
+Button:hover {
+            Background-color: #777;
+        }
 
-button.zero {
-    grid-column: span 2;
-}
+        Button.numeros{
+            Grid-column: span 1;
+            Background-color: #424242;
+        }
 
-button:active {
-    background-color: #999;
-}
+
+        Button.cero{
+            Grid-column: span 3;
+            Background-color: #424242;
+        }
+        Button:active {
+            Background-color: #999;
+        }
